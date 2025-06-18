@@ -53,6 +53,4 @@ class Player(CircleShape, pygame.sprite.Sprite):
         direction = direction * PLAYER_SHOOT_SPEED
         shot = Shot(self.position.x, self.position.y)
         shot.velocity = direction
-        shots.add(shot)
-        
-
+ 

@@ -13,8 +13,9 @@ updatable = pygame.sprite.Group()
 drawable = pygame.sprite.Group()
 asteroids = pygame.sprite.Group()
 shots = pygame.sprite.Group()
+bullets = pygame.sprite.Group()
 Player.containers = (updatable, drawable)
-Shot.containers = (updatable, drawable)
+Shot.containers = (shots,updatable, drawable)
 Asteroid.containers = (asteroids, updatable, drawable) 
 
 clock = pygame.time.Clock()
@@ -36,6 +37,11 @@ def main():
             if a.coll_detect(player):
                     print('Game over!')
                     sys.exit()
+        for b in asteroids:
+            for a in shots:
+                if b.coll_detect(a):
+                    b.kill()
+                    a.kill()
         for k in drawable:
             k.draw(screen)
         pygame.display.flip()
