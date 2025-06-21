@@ -11,3 +11,41 @@ PLAYER_SPEED = 200
 SHOT_RADIUS = 5
 PLAYER_SHOOT_SPEED = 500
 PLAYER_SHOOT_COOLDOWN = 0.3
+
+# Game states
+GAME_MENU = 0
+GAME_PLAYING = 1
+GAME_OVER = 2
+
+# Scoring
+SCORE_LARGE_ASTEROID = 100
+SCORE_MEDIUM_ASTEROID = 50
+SCORE_SMALL_ASTEROID = 25
+
+# Lives
+PLAYER_STARTING_LIVES = 3
+
+# Power-ups
+POWERUP_SPAWN_RATE = 0.1  # 10% chance per asteroid destroyed
+POWERUP_TYPES = ['rapid_fire', 'shield', 'triple_shot']
+POWERUP_DURATION = 5.0  # seconds
+
+# Colors
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+CYAN = (0, 255, 255)
+MAGENTA = (255, 0, 255)
+
+# UI
+FONT_SIZE = 24
+UI_PADDING = 20
+
+# Difficulty progression
+DIFFICULTY_INCREASE_INTERVAL = 30.0  # seconds
+ASTEROID_SPEED_INCREASE = 1.2  # multiplier
+SPAWN_RATE_DECREASE = 0.9  # multiplier (faster spawning)
+MAX_DIFFICULTY_MULTIPLIER = 3.0  # maximum difficulty multiplier
